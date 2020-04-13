@@ -13,4 +13,16 @@ boolean CheckIsUnix()
 	return is_unix
 }
 
+void ExecutePwd()
+{
+	if(isUnix())
+	{
+		sh "pwd"
+	}
+	else
+	{
+		powershell "pwd"
+	}
+}
+
 return this
