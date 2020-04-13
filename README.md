@@ -35,7 +35,28 @@ jenkins_switchNode
 ```
 - ネストが深くなるので関数にまとめたほうがいい？
 	- 外部ファイル関係もscript内なので、あまり変わらない？
-
+	- `if-else`がまとまれば見やすくはなる
+```groovy
+		stage("branch action"){
+			steps{
+				script{
+					if(isUnix()){
+						echo "node is unix like"
+					}else{
+						echo "node is not unix like"
+					}
+				}
+			}
+		}
+		stage("check function"){
+			steps{
+				script{
+					def functions = load "functions.groovy"
+					functions.CheckIsUnix()
+				}
+			}
+		}
+```
 ## メモ
 
 - 各ノードでVCSのクライアントが必要（当然だが）
