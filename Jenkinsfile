@@ -13,6 +13,13 @@ pipeline{
 				echo "IsUnix : ${isUnix()}"
 			}
 		}
+		stage("branch action"){
+			if(isUnix()){
+				echo "node is unix like"
+			}else{
+				echo "node is not unix like"
+			}
+		}
 	}
 	post{
 		always{
