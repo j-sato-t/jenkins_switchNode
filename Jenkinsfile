@@ -24,6 +24,14 @@ pipeline{
 				}
 			}
 		}
+		stage("check function"){
+			steps{
+				script{
+					def functions = load "functions.groovy"
+					functions.CheckIsUnix()
+				}
+			}
+		}
 	}
 	post{
 		always{
