@@ -21,3 +21,6 @@ jenkins_switchNode
 - 各ノードでVCSのクライアントが必要（当然だが）
 	- GitKrakenだけ使っていてgitのCLIが入っていなかったのでpullができずにエラーになっていた
 	- ノード起動中にインストールした際は再接続が必要
+- 使用できる環境変数は`http://localhost:8080/env-vars.html/`で確認する
+	- ホスト名とポートは実際のものにする
+	- 取得時は`env.VALUE_NAME`
