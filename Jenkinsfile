@@ -14,7 +14,7 @@ pipeline{
 	}
 	post{
 		always{
-			cleanWS
+			cleanWs notFailBuild: true
 		}
 		success{
 			
