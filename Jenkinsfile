@@ -16,11 +16,5 @@ pipeline{
 		always{
 			cleanWs notFailBuild: true
 		}
-		success{
-			
-		}
-		failure{
-			
-		}
 	}
 }
