@@ -35,7 +35,7 @@ pipeline{
 		stage("pwd"){
 			steps{
 				script{
-					def functions = load "functions/groovy"
+					def functions = load "functions.groovy"
 					functions.ExecutePwd()
 				}
 			}
