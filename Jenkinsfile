@@ -8,7 +8,7 @@ pipeline{
 	stages{
 		stage("A"){
 			steps{
-				echo "hello jenkins"
+				echo "hello jenkins of ${params.NodeName}"
 			}
 		}
 	}
