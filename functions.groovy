@@ -21,7 +21,7 @@ void ExecutePwd()
 	}
 	else
 	{
-		powershell "pwd"
+		powershell label: '', script: 'pwd'
 	}
 }
 
