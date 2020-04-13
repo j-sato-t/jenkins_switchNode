@@ -6,10 +6,11 @@ pipeline{
 		label "${params.NodeName}"
 	}
 	stages{
-		stage("A"){
+		stage("Check node"){
 			steps{
 				echo "hello jenkins of ${params.NodeName}"
 				echo "Node : ${env.NODE_NAME}"
+				echo "IsUnix : ${isUnix()}"
 			}
 		}
 	}
