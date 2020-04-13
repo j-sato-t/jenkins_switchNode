@@ -9,7 +9,7 @@ pipeline{
 		stage("A"){
 			steps{
 				echo "hello jenkins of ${params.NodeName}"
-				echo "OS : ${env.OS}"
+				echo "OS : ${env.os.name}"
 			}
 		}
 	}
