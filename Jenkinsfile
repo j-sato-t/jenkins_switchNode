@@ -40,6 +40,14 @@ pipeline{
 				}
 			}
 		}
+		stage("all env"){
+			steps{
+				script{
+					def json = JsonOutput.toJson(env)
+					echo json
+				}
+			}
+		}
 	}
 	post{
 		always{
