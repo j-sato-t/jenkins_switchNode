@@ -14,10 +14,14 @@ pipeline{
 			}
 		}
 		stage("branch action"){
-			if(isUnix()){
-				echo "node is unix like"
-			}else{
-				echo "node is not unix like"
+			steps{
+				script{
+					if(isUnix()){
+						echo "node is unix like"
+					}else{
+						echo "node is not unix like"
+					}
+				}
 			}
 		}
 	}
