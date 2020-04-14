@@ -65,3 +65,4 @@ jenkins_switchNode
 - 使用できる環境変数は`http://localhost:8080/env-vars.html/`で確認する
 	- ホスト名とポートは実際のものにする
 	- 取得時は`env.VALUE_NAME`
+- ステージ間で変数を使い回すときは`def`を付けない？
