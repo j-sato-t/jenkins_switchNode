@@ -25,4 +25,21 @@ void ExecutePwd()
 	}
 }
 
+void LoopCheck()
+{
+	def array = []
+
+	for(i in 0..10)
+	{
+		array.push(i)
+	}
+
+	String nums = ""
+	array.each
+	{
+		nums += it
+	}
+	echo nums
+}
+
 return this

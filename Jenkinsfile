@@ -50,6 +50,13 @@ pipeline{
 				sh "printenv"
 			}
 		}
+		stage("loop check"){
+			steps{
+				script{
+					functions.LoopCheck()
+				}
+			}
+		}
 	}
 	post{
 		always{
