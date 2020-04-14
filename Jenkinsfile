@@ -45,6 +45,11 @@ pipeline{
 				}
 			}
 		}
+		stage("envs"){
+			steps{
+				sh "printenv"
+			}
+		}
 	}
 	post{
 		always{
