@@ -6,6 +6,13 @@ pipeline{
 		label "${params.NodeName}"
 	}
 	stages{
+		stage("load script"){
+			steps{
+				script{
+					def functions = load "functions.groovy"
+				}
+			}
+		}
 		stage("Check node"){
 			steps{
 				echo "hello jenkins of ${params.NodeName}"
@@ -27,7 +34,6 @@ pipeline{
 		stage("check function"){
 			steps{
 				script{
-					def functions = load "functions.groovy"
 					functions.CheckIsUnix()
 				}
 			}
@@ -35,7 +41,6 @@ pipeline{
 		stage("pwd"){
 			steps{
 				script{
-					def functions = load "functions.groovy"
 					functions.ExecutePwd()
 				}
 			}
