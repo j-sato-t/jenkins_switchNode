@@ -9,7 +9,7 @@ pipeline{
 		stage("load script"){
 			steps{
 				script{
-					def functions = load "functions.groovy"
+					functions = load "functions.groovy"
 				}
 			}
 		}
